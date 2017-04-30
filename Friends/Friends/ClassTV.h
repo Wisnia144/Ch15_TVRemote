@@ -4,6 +4,8 @@ class Tv
 {
 public:
 	friend class RemoteX;
+	friend class RemoteManager;
+	enum Modes {NORMAL,INTERACTIVE};
 	Tv():state(Off),volume(10),maxChannel(50),channel(1){}
 	enum {Off,On};
 	enum {MinVal,MaxVal = 20};
@@ -14,6 +16,8 @@ public:
 	void volDown(void) {volume--;}
 	void chUp(void){channel++;}
 	void chDown(void){channel--;}
+	void GetMode(void){}
+	void setInteractive(RemoteX & ORm,RemoteX::Modes mMode){ORm.SetMode(mMode); }
 
 
 private:

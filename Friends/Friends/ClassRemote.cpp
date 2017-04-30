@@ -2,15 +2,8 @@
 #include "ClassRemote.h"
 #include "ClassTV.h"
 
-/*
-
-	Remote():mode(1) {};
-	void OnOff(void);
-	void volUp(void);
-	void volDown(void);
-	void chUp(void);
-	void chDown(void);
-	*/
+	using namespace std;
+	
 	void RemoteX::OnOff(Tv & t)
 	{
 		std::cout << t.onoff();
@@ -36,5 +29,10 @@
 	{
 		t.channel--;
 		std::cout << "chwn:" << t.channel << "\n";
+	}
+	void RemoteX::showMode(void)
+	{
+		cout << "modeWork:" << modeWork << endl;
+	
 	}
 

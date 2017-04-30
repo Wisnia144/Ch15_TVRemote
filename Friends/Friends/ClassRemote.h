@@ -4,6 +4,7 @@ class RemoteX
 {
 public:
 	friend class Tv;
+	friend class RemoteManager;
 	enum Modes {NORMAL,INTERACTIVE};
 
 	RemoteX(Modes inMode = NORMAL):mode(1),modeWork(inMode) {};
@@ -12,6 +13,7 @@ public:
 	void volDown(Tv & t);
 	void chUp(Tv & t);
 	void chDown(Tv & t);
+	void showMode(void);
 	
 	void SetMode(Modes mMode);
 private:

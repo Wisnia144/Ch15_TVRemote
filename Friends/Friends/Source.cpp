@@ -14,6 +14,8 @@ public:
 		cout << "Down #80 (VolDown)\n";
 		cout << "Right #77 (ChUp)\n";
 		cout << "Left #75 (ChDown)\n";
+		cout << "s show mode\n";
+		cout << "m set mode\n";
 	};
 	void switchCases(const char c)
 	{
@@ -33,6 +35,14 @@ public:
 		case 'h':
 			helpDisplay();
 			break;
+		case 's':
+			eRemote.showMode();
+			break;
+		case 'm':
+			eTv.setInteractive(eRemote,RemoteX::NORMAL);
+			eTv.setInteractive(eRemote,RemoteX::INTERACTIVE);
+			break;
+
 		};
 	};
 private:
