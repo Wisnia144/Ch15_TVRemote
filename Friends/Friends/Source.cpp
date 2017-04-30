@@ -17,7 +17,6 @@ public:
 	};
 	void switchCases(const char c)
 	{
-		//cout << "Received:" << static_cast<int>(c) <<std::	endl;
 		switch (c){
 		case 80:
 				eRemote.volDown(eTv);
